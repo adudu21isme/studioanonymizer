@@ -1,3 +1,5 @@
+# Dont use this yet, it is uncomplete...
+
 # Used for partially anonymizing roblox studio without usage of client settings
 
 ## ⚠️This script will log you out of the roblox client
