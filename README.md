@@ -2,6 +2,8 @@
 
 # Used for partially anonymizing roblox studio without usage of client settings
 
+## ❗Use default.bat for normal use, internal.bat for roblox studio internal
+
 ## ⚠️This script will log you out of the roblox client
 
 ### This doesn't delete plugin folders (folders with only userids) located at 
