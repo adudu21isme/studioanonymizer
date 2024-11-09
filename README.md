@@ -4,7 +4,7 @@
 
 ⚠️This script will log you out of the roblox client, this breaks the multiple login feature in roblox studio.
 
-❗This doesn't delete plugin folders (userid named folders) located at 
+❗This doesn't delete plugin folders (userid named folders) and settings located at 
 ```
 %userprofile%\AppData\Local\Roblox\
 ```
