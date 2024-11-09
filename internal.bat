@@ -1,5 +1,5 @@
 @echo off
-title Anonymized Studio
+title Anonymized Studio Internal
 setlocal
 :PROMPT
 SET /P AREYOUSURE=Erase Credentials? y/n:
