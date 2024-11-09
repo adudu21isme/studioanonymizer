@@ -1,16 +1,16 @@
 # Dont use this yet, it is uncomplete...
 
-# Used for partially anonymizing roblox studio without usage of client settings
+ℹ️Used for partially anonymizing roblox studio without usage of client settings such as fflags
 
-## ❗Use default.bat for normal use, internal.bat for roblox studio internal
+❗Use default.bat for normal usage, internal.bat for roblox studio internal, if signature is outdated for internal then [use this guide](https://github.com/7ap/internal-studio-patcher/wiki/Updating).
 
-## ⚠️This script will log you out of the roblox client
+⚠️This script will log you out of the roblox client, this breaks the multiple login feature in roblox studio.
 
-### This doesn't delete plugin folders (folders with only userids) located at 
+❗This doesn't delete plugin folders (userid named folders) located at 
 ```
 %userprofile%\AppData\Local\Roblox\
 ```
-### Make sure to edit the Windows Host file to include the following:
+ℹ️Make sure to edit the Windows Host file to include the following:
 
 ```
 127.0.0.1 ecsv2.roblox.com
