@@ -1,5 +1,3 @@
-# Dont use this yet, it is uncomplete...
-
 ℹ️Used for partially anonymizing roblox studio without usage of client settings such as fflags
 
 ❗Use default.bat for normal usage, internal.bat for roblox studio internal, if signature is outdated for internal then [use this guide](https://github.com/7ap/internal-studio-patcher/wiki/Updating).
