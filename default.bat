@@ -4,7 +4,7 @@ setlocal
 :PROMPT
 SET /P AREYOUSURE=Erase Credentials? y/n:
 IF /I "%AREYOUSURE%" NEQ "y" GOTO GO
-for /f "tokens=1,2 delims=" %%a in ('cmdkey /list ^| find "www.roblox.com"') do ( cmdkey /delete:%%b > nul 2>&1)
+for /f "tokens=1,2 delims= " %%a in ('cmdkey /list ^| find "www.roblox.com"') do ( cmdkey /delete:%%b > nul 2>&1)
 echo Erased Credentials
 :GO
 endlocal
