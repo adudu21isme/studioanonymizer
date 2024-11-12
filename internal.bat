@@ -8,8 +8,14 @@ for /f "tokens=1,2 delims= " %%a in ('cmdkey /list ^| find "www.roblox.com"') do
 echo Erased Credentials
 :GO
 endlocal
+setlocal
+:PROMPT
+SET /P AREYOUSURE=Anonymize Files? y/n:
+IF /I "%AREYOUSURE%" NEQ "y" GOTO GO
 echo Erasing Cache and Roblox AppData...
 powershell -Command "Remove-Item '%userprofile%\AppData\LocalLow\rbxcsettings.rbx' -Force -ErrorAction SilentlyContinue; Remove-Item '%userprofile%\AppData\Local\Roblox\AnalysticsSettings.xml' -Force -ErrorAction SilentlyContinue; Remove-Item '%userprofile%\AppData\Local\Roblox\LocalStorage' -Recurse -Force -ErrorAction SilentlyContinue; Remove-Item '%userprofile%\AppData\Local\Roblox\Downloads' -Recurse -Force -ErrorAction SilentlyContinue; Remove-Item '%userprofile%\AppData\Local\Roblox\OTAPatchBackups' -Recurse -Force -ErrorAction SilentlyContinue; Remove-Item '%userprofile%\AppData\Local\Roblox\logs' -Recurse -Force -ErrorAction SilentlyContinue; Remove-Item '%userprofile%\AppData\Local\Roblox\ScriptAutosaves' -Recurse -Force -ErrorAction SilentlyContinue; Remove-Item '%userprofile%\AppData\Local\Roblox\UserCaptures' -Recurse -Force -ErrorAction SilentlyContinue; Remove-Item '%userprofile%\AppData\Local\Roblox\Sandbox' -Recurse -Force -ErrorAction SilentlyContinue; Remove-Item '%userprofile%\AppData\Local\Roblox\pluginIDEState' -Recurse -Force -ErrorAction SilentlyContinue; Remove-Item '%userprofile%\AppData\Local\Roblox\InstalledPlugins' -Recurse -Force -ErrorAction SilentlyContinue; Remove-Item '%userprofile%\AppData\Local\Temp' -Recurse -Force -ErrorAction SilentlyContinue"
+:GO
+endlocal
 echo Adjusting Studio Registry...
 reg add "HKCU\Software\ROBLOX Corporation\Environments\RobloxStudio\Channel" /v "www.roblox.com" /t REG_SZ /d "zflag" /f > nul 2>&1
 reg add "HKCU\Software\ROBLOX Corporation\Environments\RobloxPlayer\Channel" /v "www.roblox.com" /t REG_SZ /d "zflag" /f > nul 2>&1
