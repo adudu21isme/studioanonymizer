@@ -1,5 +1,6 @@
 @echo off
 title Anonymized Studio Internal
+start "" "%userprofile%\Desktop\Patcher\target\release\internal-studio-patcher.exe"
 setlocal
 :PROMPT
 SET /P AREYOUSURE=Erase Credentials? y/n:
@@ -29,6 +30,5 @@ reg delete "HKCU\Software\Roblox\RobloxStudio\DirtyPublishWarningDialog" /f > nu
 echo Checking Studio Registry...
 powershell -Command "$robloxStudioPath='Registry::HKEY_CURRENT_USER\Software\Roblox\RobloxStudio';$subKeys=Get-ChildItem -Path $robloxStudioPath;$regexPattern='^(rbxRecentRobloxApiGames_v02_\d+|\d+(_\d+)?|(\d+rbxRecentFiles_v03))$';$foundKeys=@();foreach($key in $subKeys){if($key.PSChildName -match $regexPattern){$foundKeys+= $robloxStudioPath + '\' + $key.PSChildName;}}if($foundKeys.Count -gt 0){Write-Host '';$foundKeys | ForEach-Object {Write-Host $_};$confirmation=Read-Host 'Delete UserId Studio Registry? y/n';if($confirmation -eq 'y'){foreach($keyPath in $foundKeys){Remove-Item -Path $keyPath -Recurse -Force -ErrorAction SilentlyContinue}Write-Host 'Deleted UserIds';}}"
 echo Patching Studio...
-"%userprofile%\Desktop\Patcher\target\release\internal-studio-patcher.exe" > nul 2>&1
 echo Launching...
 start "" "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Roblox\Roblox Studio.lnk"
