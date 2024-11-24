@@ -11,6 +11,9 @@
 ℹ️Make sure to edit the Windows Host file to include the following:
 
 ```
+::1       localhost
+127.0.0.1 localhost
+127.0.0.1 rbx.com
 127.0.0.1 ecsv2.roblox.com
 127.0.0.1 ncs.roblox.com
 127.0.0.1 client-telemetry.roblox.com
