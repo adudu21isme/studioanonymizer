@@ -1,6 +1,6 @@
 ℹ️Used for partially anonymizing roblox studio without usage of client settings such as FFlags.
 
-❗Use default.bat for normal usage. internal.bat for roblox studio internal, make sure "Patcher" folder is located in %userprofile%\Desktop\. if signature is outdated then [use this guide](https://github.com/7ap/internal-studio-patcher/wiki/Updating)..
+❗Use default.bat for normal usage. internal.bat for roblox studio internal, make sure "Patcher" folder is located in %userprofile%\Desktop\. if signature is outdated then [use this guide](https://github.com/7ap/internal-studio-patcher/wiki/Updating), if the script automatically runs the patcher and doesn't patch while the signature is valid then manually run the patcher (.exe).
 
 ⚠️This script will log you out of the roblox client, this breaks the multiple login feature in roblox studio.
 
