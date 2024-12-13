@@ -13,6 +13,7 @@
 ```
 ::1       localhost
 127.0.0.1 localhost
+127.0.0.1 rbxinfra.com
 127.0.0.1 rbx.com
 127.0.0.1 ecsv2.roblox.com
 127.0.0.1 ncs.roblox.com
