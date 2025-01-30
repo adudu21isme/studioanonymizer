@@ -1,4 +1,5 @@
 @echo off
+title Anonymized Studio Internal
 setlocal enabledelayedexpansion
 set "tries=0"
 set "max=3"
@@ -17,7 +18,6 @@ if /i "!output!"=="failure" echo Failed patching, please refer to the informatio
 if /i "!output!"=="Patched" echo Patched successfully!
 :end
 endlocal
-title Anonymized Studio Internal
 setlocal
 :PROMPT
 SET /P AREYOUSURE=Erase Credentials? y/n:
