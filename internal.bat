@@ -1,6 +1,23 @@
 @echo off
+setlocal enabledelayedexpansion
+set "tries=0"
+set "max=3"
+:check
+for /f "delims=" %%a in ('%userprofile%\Desktop\Patcher\target\release\internal-studio-patcher.exe 2^>nul') do set "output=%%a"
+for %%e in ("Not found" "Not read input file" "Cant overwrite") do (
+    echo !output! | findstr /i "%%~e" >nul && (
+        echo %%~e
+        set "output=%%~e"
+        set /a tries+=1
+        if !tries! lss %max% goto :check
+        goto end
+    )
+)
+if /i "!output!"=="failure" echo Failed patching, please refer to the information within the repository.
+if /i "!output!"=="Patched" echo Patched successfully!
+:end
+endlocal
 title Anonymized Studio Internal
-start "" "%userprofile%\Desktop\Patcher\target\release\internal-studio-patcher.exe"
 setlocal
 :PROMPT
 SET /P AREYOUSURE=Erase Credentials? y/n:
