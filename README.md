@@ -10,7 +10,7 @@ and
 ```
 RobloxStudioLauncherBeta.exe
 ```
-in your roblox studio installation.
+in your roblox studio installation however this is not recommended as updates tend to add new content, fix bugs and such.
 
 ❗This doesn't delete plugin folders (userid named folders) and settings located at 
 ```
